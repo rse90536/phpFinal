@@ -16,7 +16,6 @@
         <!-- Styles -->
         <style>
              html, body {
-                background-color: #B0C7DC;
                 color: #2A3747;
                 font-family: 'Microsoft JhengHei','Raleway', sans-serif;
                 font-weight: 100;
@@ -37,16 +36,16 @@
     <body>
         <div class="flex-center position-ref full-height">         
             <div class="content"> 
-                <h1>Register</h1>               
-                    <div class="register m-b-md">
+               <h1>註冊</h1>               
+                 <div class="register m-b-md">
                     帳號：<input id="account" type="text"/>
                     <br/>                    
                     密碼：<input id="password" type="text"/>
                     <br/>                    
-                    名字：<input id="name" type="text"/>
+                    您的名字：<input id="name" type="text"/>
                     <br/>
-                    <button onclick="register()">送出</button>
-                    </div>               
+                    <button onclick="register()">註冊</button>
+                 </div>              
             </div>
         </div>
     </body>

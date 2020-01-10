@@ -8,7 +8,7 @@
              integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
              crossorigin="anonymous"></script>
         
-        <title>getComment</title>
+        <title>留言板</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -16,15 +16,15 @@
         <!-- Styles -->
         <style>
              html, body {
-                background-color: #FFC1E0;
-                color: #D9006C;
+                background-color: #FFBF80;
+                color: #5685EB;
                 font-family: 'Microsoft JhengHei','Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
             .content {
-                width:500px;
+                width:800px;
                 margin:0 auto;
                 font-weight:bold;
                 padding-top:50px;
@@ -41,11 +41,11 @@
         <div class="flex-center position-ref full-height">         
             <div class="content">                                   
                     <div class="m-b-md"> 
-                    <a href="{{ url('/') }}">回首頁<a>                                       
-                    <h1>-----留言版-----<h1>          
+                    <a href="{{ url('/') }}">回到首頁<a>                                       
+                    <h1>/*留言板*\<h1>          
                     </div> 
                     <br/>
-                    <div id="comments"></div>                
+                    <div id="comment-content"></div>                
             </div>
         </div>
     </body>
@@ -59,12 +59,12 @@
             dataType: 'json',                                      
             success: function(data){       
                 $.each(data, function (i, val) {
-                     var string = "<label>編號："+data[i].comment_id+"</label><br>"+
-                     "<label>留言者："+data[i].name+"</label><br>"+
-                     "<label>留言內容："+data[i].content+"</label><br>"+
+                     var string = "<label>No.："+data[i].comment_id+"</label><br>"+
+                     "<label>名字："+data[i].name+"</label><br>"+
+                     "<label>內容："+data[i].content+"</label><br>"+
                      "<label>留言時間："+data[i].created_at+"</label><br>"+
-                     "------------------<br>";
-                     $("#comments").append(string)  
+                     "_________________<br>";
+                     $("#comment-content").append(string)  
                 })             
                         
             },

@@ -8,7 +8,7 @@
              integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
              crossorigin="anonymous"></script>
         
-        <title>Comment</title>
+        <title>留言區</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -16,8 +16,8 @@
         <!-- Styles -->
         <style>
              html, body {
-                background-color:#FFC1E0;
-                color: #D9006C;
+                background-color:#61C595;
+                color: #E3DB64;
                 font-family: 'Microsoft JhengHei','Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -37,17 +37,16 @@
     <body>
         <div class="flex-center position-ref full-height">         
             <div class="content"> 
-                <h1>Comment</h1>               
+                <h1>開始留言</h1>               
                     <div class="register m-b-md"> 
-                    <a href="{{ url('/') }}">回首頁<a> <br>                                    
-                    留言內容：<input id="comment" type="textarea"/>
+                    <a href="{{ url('/') }}">回到首頁<a> <br>                                    
+                    要留言的內容：<input id="comment" type="textarea"/>
                     <br/>                                
                     <button onclick="comment()">送出</button>
                     </div>               
                     <div class="register m-b-md">                                     
-                    <a href="{{ url('/getComment') }}">前往留言板</a>
-                    <br/>
-                                                    
+                    <a href="{{ url('/getComment') }}">去留言板看看~</a>
+                    <br/>                        
                     </div>               
             </div>
         </div>
@@ -66,9 +65,6 @@
                 "content":content,                                           
             },                                    
             dataType: 'json',                                      
-            success: function(data){                                
-                              
-            },
             statusCode: {   
                 200: function(res) {
                     console.log(res);

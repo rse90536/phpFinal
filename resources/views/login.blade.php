@@ -8,20 +8,19 @@
              integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
              crossorigin="anonymous"></script>
         
-        <title>Login</title>
+        <title>登入</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
-             html, body {
-                background-color: #114680;
-                color: #fff;
+                   html, body {
+                color: #000000;
                 font-family: 'Microsoft JhengHei','Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+               
             }
             .content {
                 font-weight:bold;
@@ -30,20 +29,20 @@
                 
             }         
             input{
-                margin:5px;
+                margin:20px;
             }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">         
             <div class="content"> 
-                <h1>Login</h1>               
+                <h1>登入</h1>               
                     <div class="register m-b-md">
-                    帳號：<input id="account" type="text"/>
+                    請輸入帳號：<input id="account" type="text"/>
                     <br/>                    
-                    密碼：<input id="password" type="text"/>
+                    請輸入密碼：<input id="password" type="text"/>
                     <br/>                                
-                    <button onclick="login()">送出</button>
+                    <button onclick="login()">登入</button>
                     </div>               
             </div>
         </div>
